@@ -34,16 +34,16 @@ OF SUCH DAMAGE.
 
 #if (!defined(__UIA_HeadingLevelIds_MODULE_DEFINED__) && defined(__MINGW64__))
 
-const long HeadingLevel_None = 80050;
-const long HeadingLevel1 = 80051;
-const long HeadingLevel2 = 80052;
-const long HeadingLevel3 = 80053;
-const long HeadingLevel4 = 80054;
-const long HeadingLevel5 = 80055;
-const long HeadingLevel6 = 80056;
-const long HeadingLevel7 = 80057;
-const long HeadingLevel8 = 80058;
-const long HeadingLevel9 = 80059;
+constexpr long HeadingLevel_None{80050};
+constexpr long HeadingLevel1{80051};
+constexpr long HeadingLevel2{80052};
+constexpr long HeadingLevel3{80053};
+constexpr long HeadingLevel4{80054};
+constexpr long HeadingLevel5{80055};
+constexpr long HeadingLevel6{80056};
+constexpr long HeadingLevel7{80057};
+constexpr long HeadingLevel8{80058};
+constexpr long HeadingLevel9{80059};
 
 #endif
 
@@ -86,7 +86,7 @@ public:
         {
             return false;
         }
-        const auto description = Utility::FormatArgs(format, args...);
+        const auto description{Utility::FormatArgs(format, args...)};
         if (description.empty())
         {
             return false;
@@ -100,7 +100,7 @@ public:
         {
             return false;
         }
-        const auto description = Utility::FormatArgs(format, args...);
+        const auto description{Utility::FormatArgs(format, args...)};
         if (description.empty())
         {
             return false;
@@ -116,7 +116,7 @@ public:
         {
             return false;
         }
-        const auto help = Utility::FormatArgs(format, args...);
+        const auto help{Utility::FormatArgs(format, args...)};
         if (help.empty())
         {
             return false;
@@ -131,7 +131,7 @@ public:
         {
             return false;
         }
-        const auto help = Utility::FormatArgs(format, args...);
+        const auto help{Utility::FormatArgs(format, args...)};
         if (help.empty())
         {
             return false;
@@ -148,7 +148,7 @@ public:
         {
             return false;
         }
-        const auto name = Utility::FormatArgs(format, args...);
+        const auto name{Utility::FormatArgs(format, args...)};
         if (name.empty())
         {
             return false;
@@ -162,7 +162,7 @@ public:
         {
             return false;
         }
-        const auto name = Utility::FormatArgs(format, args...);
+        const auto name{Utility::FormatArgs(format, args...)};
         if (name.empty())
         {
             return false;
@@ -180,7 +180,7 @@ public:
         {
             return false;
         }
-        const auto value = Utility::FormatArgs(format, args...);
+        const auto value{Utility::FormatArgs(format, args...)};
         if (value.empty())
         {
             return false;
@@ -194,7 +194,7 @@ public:
         {
             return false;
         }
-        const auto value = Utility::FormatArgs(format, args...);
+        const auto value{Utility::FormatArgs(format, args...)};
         if (value.empty())
         {
             return false;
@@ -220,7 +220,7 @@ public:
         {
             return false;
         }
-        const auto description = Utility::FormatArgs(format, args...);
+        const auto description{Utility::FormatArgs(format, args...)};
         if (description.empty())
         {
             return false;
@@ -234,7 +234,7 @@ public:
         {
             return false;
         }
-        const auto description = Utility::FormatArgs(format, args...);
+        const auto description{Utility::FormatArgs(format, args...)};
         if (description.empty())
         {
             return false;
@@ -253,7 +253,7 @@ public:
         {
             return false;
         }
-        const auto helpText = Utility::FormatArgs(format, args...);
+        const auto helpText{Utility::FormatArgs(format, args...)};
         if (helpText.empty())
         {
             return false;
@@ -267,7 +267,7 @@ public:
         {
             return false;
         }
-        const auto helpText = Utility::FormatArgs(format, args...);
+        const auto helpText{Utility::FormatArgs(format, args...)};
         if (helpText.empty())
         {
             return false;
@@ -299,7 +299,7 @@ public:
         {
             return false;
         }
-        const auto name = FormatArgs(format, args...);
+        const auto name{FormatArgs(format, args...)};
         if (name.empty())
         {
             return false;
@@ -313,7 +313,7 @@ public:
         {
             return false;
         }
-        const auto name = FormatArgs(format, args...);
+        const auto name{FormatArgs(format, args...)};
         if (name.empty())
         {
             return false;
@@ -330,7 +330,7 @@ public:
         {
             return false;
         }
-        const auto name = Utility::FormatArgs(format, args...);
+        const auto name{Utility::FormatArgs(format, args...)};
         if (name.empty())
         {
             return false;
@@ -344,7 +344,7 @@ public:
         {
             return false;
         }
-        const auto name = Utility::FormatArgs(format, args...);
+        const auto name{Utility::FormatArgs(format, args...)};
         if (name.empty())
         {
             return false;
@@ -372,8 +372,8 @@ private:
     using IAccessiblePtr = _com_ptr_t<_com_IIID<IAccessible, &IID_IAccessible>>;
     using IAccPropServicesPtr = _com_ptr_t<_com_IIID<IAccPropServices, &IID_IAccPropServices>>;
 #endif
-    HWND m_window = nullptr;
-    DWORD m_objectId = static_cast<DWORD>(OBJID_CLIENT);
-    IAccPropServicesPtr m_pAccPropServices = nullptr;
-    bool m_initAccPropServicesFailed = false;
+    HWND m_window{nullptr};
+    DWORD m_objectId{static_cast<DWORD>(OBJID_CLIENT)};
+    IAccPropServicesPtr m_pAccPropServices{nullptr};
+    bool m_initAccPropServicesFailed{false};
 };

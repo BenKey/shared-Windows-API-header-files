@@ -125,7 +125,7 @@ template<typename... Arguments>
 inline std::wstring FormatArgs(UINT fmt, const Arguments&... args)
 {
     using namespace std::string_literals;
-    const auto formatStr = loadString(fmt);
+    const auto formatStr{loadString(fmt)};
     if (formatStr.empty())
     {
         return L""s;
